@@ -6,6 +6,7 @@ config module so there is one source of truth.
 """
 
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
+from sqlalchemy.pool import NullPool
 
 from app.core.config import settings
 
@@ -26,9 +27,8 @@ else:
     engine = create_async_engine(
         DATABASE_URL,
         pool_pre_ping=True,
-        pool_recycle=settings.DB_POOL_RECYCLE,
-        pool_size=settings.DB_POOL_SIZE,
-        max_overflow=settings.DB_MAX_OVERFLOW,
+        poolclass=NullPool,
+        connect_args={"ssl": "require"},
     )
 
 AsyncSessionLocal = async_sessionmaker(
