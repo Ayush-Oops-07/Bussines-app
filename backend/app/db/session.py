@@ -28,7 +28,7 @@ else:
         DATABASE_URL,
         pool_pre_ping=True,
         poolclass=NullPool,
-        connect_args={"ssl": "require"},
+        connect_args={"ssl": "require", "statement_cache_size": 0},
     )
 
 AsyncSessionLocal = async_sessionmaker(
