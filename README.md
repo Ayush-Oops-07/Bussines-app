@@ -74,7 +74,7 @@ The system enforces permissions on both the frontend UI and backend endpoints:
    ```env
    ENVIRONMENT=development
    DATABASE_URL=sqlite+aiosqlite:///./sandeep_traders.db
-   SECRET_KEY=dev-secret-key-12345
+   SECRET_KEY=LFDNHfAACM9jk6Fu-KI4XoQF-dnW0H_cIgjJWAhFi2g
    ACCESS_TOKEN_EXPIRE_MINUTES=15
    ```
 

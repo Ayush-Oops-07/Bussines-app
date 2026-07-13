@@ -26,7 +26,7 @@ class Settings(BaseSettings):
     )
 
     # ── JWT / Auth ────────────────────────────────────────────────────────
-    SECRET_KEY: str = Field(default="st-super-secret-change-in-prod", description="JWT signing key")
+    SECRET_KEY: str = Field(default="LFDNHfAACM9jk6Fu-KI4XoQF-dnW0H_cIgjJWAhFi2g", description="JWT signing key")
     ALGORITHM: str = Field(default="HS256", description="JWT signing algorithm")
     ACCESS_TOKEN_EXPIRE_MINUTES: int = Field(default=15, description="Access token expiry in minutes")
     REFRESH_TOKEN_EXPIRE_DAYS: int = Field(default=7, description="Refresh token expiry in days")
