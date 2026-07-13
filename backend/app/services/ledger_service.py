@@ -18,7 +18,7 @@ from sqlalchemy import select, func, extract, or_
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
-from backend.app.models.models import (
+from app.models.models import (
     Party,
     LedgerEntry,
     PaymentTransaction,
@@ -27,7 +27,7 @@ from backend.app.models.models import (
     PurchaseReturn,
     SystemSetting,
 )
-from backend.app.repositories import (
+from app.repositories import (
     ledger_repository,
     party_repository,
     payment_repository,

@@ -6,9 +6,9 @@ import logging
 from sqlalchemy import select, func
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models.models import User, Product
-from backend.app.security.auth import get_password_hash
-from backend.app.core.config import settings
+from app.models.models import User, Product
+from app.security.auth import get_password_hash
+from app.core.config import settings
 
 logger = logging.getLogger("sandeep-traders.seed")
 

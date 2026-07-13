@@ -10,7 +10,7 @@ from decimal import Decimal
 from sqlalchemy import select, or_, func
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models.models import Party
+from app.models.models import Party
 
 
 async def get_by_id(db: AsyncSession, party_id: uuid.UUID) -> Optional[Party]:

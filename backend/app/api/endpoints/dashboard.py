@@ -8,9 +8,9 @@ from datetime import date
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.core.dependencies import get_db, get_current_user
-from backend.app.models.models import User
-from backend.app.services import dashboard_service
+from app.core.dependencies import get_db, get_current_user
+from app.models.models import User
+from app.services import dashboard_service
 
 router = APIRouter(prefix="/api/dashboard", tags=["dashboard"])
 

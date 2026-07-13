@@ -9,7 +9,7 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
-from backend.app.models.models import PaymentTransaction
+from app.models.models import PaymentTransaction
 
 
 async def get_by_id(

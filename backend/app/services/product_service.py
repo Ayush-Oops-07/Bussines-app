@@ -9,10 +9,10 @@ import uuid
 from typing import List
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models.models import Product
-from backend.app.schemas.schemas import ProductCreate, ProductUpdate
-from backend.app.repositories import product_repository, audit_repository
-from backend.app.services.ledger_service import d, to_float
+from app.models.models import Product
+from app.schemas.schemas import ProductCreate, ProductUpdate
+from app.repositories import product_repository, audit_repository
+from app.services.ledger_service import d, to_float
 
 
 def product_to_dict(p: Product) -> dict:

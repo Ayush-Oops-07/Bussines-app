@@ -9,10 +9,10 @@ from typing import Optional
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.core.dependencies import get_db, get_current_user, RoleChecker
-from backend.app.models.models import User
-from backend.app.schemas.schemas import PaymentTransactionCreate
-from backend.app.services import payment_service
+from app.core.dependencies import get_db, get_current_user, RoleChecker
+from app.models.models import User
+from app.schemas.schemas import PaymentTransactionCreate
+from app.services import payment_service
 
 router = APIRouter(prefix="/api/payments", tags=["payments"])
 

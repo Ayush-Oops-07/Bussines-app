@@ -10,7 +10,7 @@ from sqlalchemy import select, or_, func
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
 
-from backend.app.models.models import PurchaseReturn, PurchaseReturnItem, Party
+from app.models.models import PurchaseReturn, PurchaseReturnItem, Party
 
 
 async def get_by_id(

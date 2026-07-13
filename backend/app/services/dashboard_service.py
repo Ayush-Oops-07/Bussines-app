@@ -10,9 +10,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, func, extract
 from sqlalchemy.orm import selectinload
 
-from backend.app.models.models import Party, LedgerEntry
-from backend.app.services.party_service import party_to_dict
-from backend.app.services.ledger_service import entry_to_dict
+from app.models.models import Party, LedgerEntry
+from app.services.party_service import party_to_dict
+from app.services.ledger_service import entry_to_dict
 
 
 async def get_dashboard(

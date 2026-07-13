@@ -9,10 +9,10 @@ import uuid
 from typing import List, Optional
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models.models import Party
-from backend.app.schemas.schemas import PartyCreate, PartyUpdate
-from backend.app.repositories import party_repository, audit_repository
-from backend.app.services.ledger_service import (
+from app.models.models import Party
+from app.schemas.schemas import PartyCreate, PartyUpdate
+from app.repositories import party_repository, audit_repository
+from app.services.ledger_service import (
     to_float,
     d,
     recalculate_party_balance,

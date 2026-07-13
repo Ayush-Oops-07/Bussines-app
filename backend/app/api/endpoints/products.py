@@ -8,10 +8,10 @@ import uuid
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.core.dependencies import get_db, get_current_user, RoleChecker
-from backend.app.models.models import User
-from backend.app.schemas.schemas import ProductCreate, ProductUpdate
-from backend.app.services import product_service
+from app.core.dependencies import get_db, get_current_user, RoleChecker
+from app.models.models import User
+from app.schemas.schemas import ProductCreate, ProductUpdate
+from app.services import product_service
 
 router = APIRouter(prefix="/api/products", tags=["products"])
 

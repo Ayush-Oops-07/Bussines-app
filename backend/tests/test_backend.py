@@ -13,11 +13,11 @@ from sqlalchemy.pool import StaticPool
 TEST_DB_URL = "sqlite+aiosqlite:///:memory:"
 os.environ["DATABASE_URL"] = TEST_DB_URL
 
-from backend.app.main import app
-from backend.app.db.session import get_db
-from backend.app.models.base import Base
-from backend.app.models.models import User, Party, Product, Invoice, LedgerEntry, PurchaseReturn, PaymentTransaction, InvoiceAdjustment
-from backend.app.security.auth import get_password_hash
+from app.main import app
+from app.db.session import get_db
+from app.models.base import Base
+from app.models.models import User, Party, Product, Invoice, LedgerEntry, PurchaseReturn, PaymentTransaction, InvoiceAdjustment
+from app.security.auth import get_password_hash
 
 # Create test engine and session
 test_engine = create_async_engine(

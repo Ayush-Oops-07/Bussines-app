@@ -19,10 +19,10 @@ from sqlalchemy import select, func
 from sqlalchemy.ext.asyncio import AsyncSession
 
 # Backend imports
-from backend.app.core.dependencies import get_db, get_current_user
-from backend.app.models.models import User, Party, LedgerEntry, InvoiceAdjustment
-from backend.app.repositories import party_repository, invoice_repository, return_repository
-from backend.app.services import ledger_service
+from app.core.dependencies import get_db, get_current_user
+from app.models.models import User, Party, LedgerEntry, InvoiceAdjustment
+from app.repositories import party_repository, invoice_repository, return_repository
+from app.services import ledger_service
 
 # ReportLab imports for PDF
 from reportlab.lib.pagesizes import A4

@@ -8,7 +8,7 @@ from typing import Optional, List
 from sqlalchemy import select, func
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models.models import InvoiceAdjustment
+from app.models.models import InvoiceAdjustment
 
 
 async def get_by_id(

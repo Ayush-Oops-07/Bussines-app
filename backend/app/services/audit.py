@@ -8,8 +8,8 @@ import uuid
 from typing import Optional, List
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models.models import AuditLog
-from backend.app.repositories import audit_repository
+from app.models.models import AuditLog
+from app.repositories import audit_repository
 
 
 def sanitize_audit_values(values: Optional[dict]) -> Optional[dict]:

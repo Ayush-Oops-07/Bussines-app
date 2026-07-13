@@ -8,9 +8,9 @@ from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 
-from backend.app.core.config import settings
-from backend.app.db.session import get_db
-from backend.app.models.models import User
+from app.core.config import settings
+from app.db.session import get_db
+from app.models.models import User
 
 # Argon2 setup
 pwd_context = CryptContext(schemes=["argon2"], deprecated="auto")

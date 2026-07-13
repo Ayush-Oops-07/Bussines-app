@@ -8,9 +8,9 @@ from typing import Optional
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.core.dependencies import get_db, RoleChecker
-from backend.app.models.models import User
-from backend.app.services import audit as audit_service
+from app.core.dependencies import get_db, RoleChecker
+from app.models.models import User
+from app.services import audit as audit_service
 
 router = APIRouter(prefix="/api/admin/audit-logs", tags=["audit"])
 

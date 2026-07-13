@@ -17,7 +17,7 @@ from sqlalchemy import (
 )
 from sqlalchemy.orm import relationship
 from sqlalchemy.dialects.postgresql import UUID
-from backend.app.models.base import Base, UUIDModelMixin
+from app.models.base import Base, UUIDModelMixin
 
 # ─────────────────────────────────────────────────────────────
 # ENUMS

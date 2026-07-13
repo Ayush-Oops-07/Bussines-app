@@ -8,8 +8,8 @@ endpoint files can import from a single location.
 from typing import Optional
 from fastapi import Query
 
-from backend.app.db.session import get_db  # noqa: F401 — re-export
-from backend.app.security.auth import get_current_user, RoleChecker  # noqa: F401
+from app.db.session import get_db  # noqa: F401 — re-export
+from app.security.auth import get_current_user, RoleChecker  # noqa: F401
 
 
 class PaginationParams:

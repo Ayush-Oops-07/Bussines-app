@@ -11,16 +11,16 @@ from typing import Optional, List
 from datetime import datetime
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from backend.app.models.models import PaymentTransaction, LedgerEntry
-from backend.app.schemas.schemas import PaymentTransactionCreate
-from backend.app.repositories import (
+from app.models.models import PaymentTransaction, LedgerEntry
+from app.schemas.schemas import PaymentTransactionCreate
+from app.repositories import (
     payment_repository,
     party_repository,
     ledger_repository,
     adjustment_repository,
     audit_repository,
 )
-from backend.app.services.ledger_service import (
+from app.services.ledger_service import (
     d,
     to_float,
     recalculate_party_balance,

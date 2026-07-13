@@ -4,10 +4,10 @@ from fastapi import FastAPI, Request, status
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.app.db.session import engine, AsyncSessionLocal
-from backend.app.models.base import Base
-from backend.app.db.seed import seed_defaults
-from backend.app.api.endpoints import (
+from app.db.session import engine, AsyncSessionLocal
+from app.models.base import Base
+from app.db.seed import seed_defaults
+from app.api.endpoints import (
     auth,
     parties,
     products,
@@ -55,8 +55,8 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-from backend.app.core.config import settings
-from backend.app.middleware.security import (
+from app.core.config import settings
+from app.middleware.security import (
     SecurityHeadersMiddleware,
     RequestTracingMiddleware,
     ResponseEnvelopeMiddleware

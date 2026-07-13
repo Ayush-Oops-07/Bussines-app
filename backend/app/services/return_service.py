@@ -13,15 +13,15 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select, or_, func
 from sqlalchemy.orm import selectinload
 
-from backend.app.models.models import PurchaseReturn, PurchaseReturnItem, Invoice, Party, LedgerEntry
-from backend.app.repositories import (
+from app.models.models import PurchaseReturn, PurchaseReturnItem, Invoice, Party, LedgerEntry
+from app.repositories import (
     return_repository,
     party_repository,
     invoice_repository,
     ledger_repository,
     audit_repository,
 )
-from backend.app.services.ledger_service import (
+from app.services.ledger_service import (
     d,
     to_float,
     next_return_number,
