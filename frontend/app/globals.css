@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  /* Default is Light Mode matching Indian Accounting / Billing Software */
+  --background: #F8FAFC;
+  --foreground: #111827;
+  --card: #FFFFFF;
+  --card-foreground: #111827;
+  --popover: #FFFFFF;
+  --popover-foreground: #111827;
+  --primary: #2563EB;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F8FAFC;
+  --secondary-foreground: #111827;
+  --muted: #F8FAFC;
+  --muted-foreground: #6B7280;
+  --accent: #E5E7EB;
+  --accent-foreground: #111827;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #D1D5DB;
+  --input: #D1D5DB;
+  --ring: #2563EB;
+
+  --bg2: #F6F8FC;
+  --bg3: #E5E7EB;
+  --bg4: #D1D5DB;
+
+  --blue: #2563EB;
+  --green: #16A34A;
+  --amber: #F59E0B;
+  --red: #EF4444;
+  --violet: #8B5CF6;
+
+  --text-muted: #6B7280;
+  --text-dark: #111827;
+}
+
+.dark {
+  --background: #090e1a;
+  --foreground: #f8fafc;
+  --card: #111827;
+  --card-foreground: #f8fafc;
+  --popover: #111827;
+  --popover-foreground: #f8fafc;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #1f2937;
+  --secondary-foreground: #f8fafc;
+  --muted: #1f2937;
+  --muted-foreground: #9ca3af;
+  --accent: #374151;
+  --accent-foreground: #f8fafc;
+  --border: #374151;
+  --input: #374151;
+  --ring: #3b82f6;
+
+  --bg2: #0f172a;
+  --bg3: #1e293b;
+  --bg4: #334155;
+
+  --blue: #3b82f6;
+  --green: #10b981;
+  --amber: #f59e0b;
+  --red: #ef4444;
+  --violet: #8b5cf6;
+
+  --text-muted: #9ca3af;
+  --text-dark: #f8fafc;
+}
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-bg2: var(--bg2);
+  --color-bg3: var(--bg3);
+  --color-bg4: var(--bg4);
+
+  --color-blue: var(--blue);
+  --color-green: var(--green);
+  --color-amber: var(--amber);
+  --color-red: var(--red);
+  --color-violet: var(--violet);
+
+  --color-appBlue: var(--blue);
+  --color-appGreen: var(--green);
+  --color-appAmber: var(--amber);
+  --color-appRed: var(--red);
+  --color-appViolet: var(--violet);
+
+  --color-textMuted: var(--text-muted);
+  --color-textDark: var(--text-dark);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar matching styling of legacy application */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+/* Print Layout configuration */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  aside,
+  header,
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  /* Remove Left Padding of Sidebar on MainLayout wrapper */
+  div.md\:pl-\[260px\],
+  .md\:pl-\[260px\] {
+    padding-left: 0 !important;
+  }
+  /* Remove page margin padding */
+  main {
+    padding: 0 !important;
+  }
+  /* Tables formatting for print */
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    color: #000000 !important;
+  }
+  th, td {
+    border: 1px solid #000000 !important;
+    color: #000000 !important;
+    padding: 6px 8px !important;
+  }
+  th {
+    background-color: #e2e8f0 !important;
+    color: #000000 !important;
+    font-weight: bold !important;
+  }
+  /* Prevent page breaks inside rows */
+  tr {
+    page-break-inside: avoid !important;
+  }
+}
